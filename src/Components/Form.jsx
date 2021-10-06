@@ -19,17 +19,11 @@ const Form = () => {
 
     }
     function submit(){
-        let flag=false;
-        let check = "@";
-        for(let i=0;i<email.length;i++){
-            if(email.charAt(i)==check.charAt(0))
-                flag=true;
-        }
-        console.log(flag);
-        if(flag&&phone.length>10){
+        console.log(email.search("@"));
+        if(email.search("@")==-1&&phone.length!=10){
             setError("Please enter a valid email and password")
         }
-        else if(flag){
+        else if(email.search("@")==-1){
             setError("Please enter a valid email")
         }
         else if(phone.length!=10){
