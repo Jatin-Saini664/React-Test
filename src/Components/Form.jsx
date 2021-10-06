@@ -19,11 +19,10 @@ const Form = () => {
 
     }
     function submit(){
-        console.log(email.search("@"));
-        if(email.search("@")==-1&&phone.length!=10){
+        if(email.search("@")==-1&&email.search("@")==email.length-1&&phone.length!=10){
             setError("Please enter a valid email and phone number")
         }
-        else if(email.search("@")==-1){
+        else if(email.search("@")==-1&&email.search("@")==email.length-1){
             setError("Please enter a valid email")
         }
         else if(phone.length!=10){
@@ -46,11 +45,13 @@ const Form = () => {
             <h3>Phone No.</h3>
             <input type="tel" name="Phone" id="" placeholder="Phone NO." onChange={onchange}/>
             <br />
-            <div><span>Gender :&nbsp;</span>
-            <span>Male </span>
-            <input type="radio" name="gender" id="" />
-            <span>Female </span>
-            <input type="radio" name="gender" id="" /></div>
+            <div>
+                <span>Gender :&nbsp;</span>
+                <span>Male </span>
+                <input type="radio" name="gender" id="" />
+                <span>Female </span>
+                <input type="radio" name="gender" id="" />
+            </div>
             
             <br />
             <button onClick={submit}>Submit</button>
