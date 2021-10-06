@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import Sequence1 from "../src/Components/Sequence1";
+import Sequence2 from "../src/Components/Sequence2";
+import Form from "../src/Components/Form"; 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sequence1></Sequence1>
+      <Sequence2></Sequence2>
+      <Form></Form>
     </div>
   );
 }
