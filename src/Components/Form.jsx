@@ -21,7 +21,7 @@ const Form = () => {
     function submit(){
         console.log(email.search("@"));
         if(email.search("@")==-1&&phone.length!=10){
-            setError("Please enter a valid email and password")
+            setError("Please enter a valid email and phone number")
         }
         else if(email.search("@")==-1){
             setError("Please enter a valid email")
